@@ -8,7 +8,7 @@ const { SERVER_NAME, SERVER_PORT } = process.env;
 const api = express();
 api.use(cors());
 
-api.get('/', async ({ res }) => {
+api.get('/test', async ({ res }) => {
   setTimeout(async () => res.send({
     server: SERVER_NAME,
     status: "success"
