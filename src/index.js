@@ -2,9 +2,7 @@ import cors from 'cors';
 import express from 'express';
 import os from 'os';
 
-require('dotenv').config()
-
-const { SERVER_PORT } = process.env;
+const SERVER_PORT = 80;
 const api = express();
 const response = { server: os.hostname(), status: "success" }
 
