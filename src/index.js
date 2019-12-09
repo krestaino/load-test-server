@@ -1,12 +1,12 @@
 import cors from 'cors';
 import express from 'express';
+import os from 'os';
 
 require('dotenv').config()
 
-const { SERVER_NAME, SERVER_PORT } = process.env;
-
+const { SERVER_PORT } = process.env;
 const api = express();
-const response = { server: SERVER_NAME, status: "success" }
+const response = { server: os.hostname(), status: "success" }
 
 api.use(cors());
 
